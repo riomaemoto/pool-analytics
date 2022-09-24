@@ -1,37 +1,37 @@
-import { atom } from "recoil";
+import { atom, selector } from "recoil";
 
-export const leftInput = atom<string>({
+export const LeftInput = atom<string>({
   key: "leftInput",
   default: "",
 });
 
-export const rightInput = atom<string>({
+export const RightInput = atom<string>({
   key: "rightInput",
   default: "",
 });
 
-export const scoreLeftState = atom<number>({
+export const ScoreLeftState = atom<number>({
   key: "scoreLeftState",
   default: 0,
 });
-export const scoreRightState = atom<number>({
+export const ScoreRightState = atom<number>({
   key: "scoreRightState",
   default: 0,
 });
-export const totalBreaksLeftState = atom<number>({
+export const TotalBreaksLeftState = atom<number>({
   key: "totalBreaksLeftState",
   default: 0,
 });
-export const totalBreaksRightState = atom<number>({
+export const TotalBreaksRightState = atom<number>({
   key: "totalBreaksRightState",
   default: 0,
 });
 
-export const dryBreakCountLeftState = atom<number>({
+export const DryBreakCountLeftState = atom<number>({
   key: "dryBreakCountLeftState",
   default: 0,
 });
-export const dryBreakCountRightState = atom<number>({
+export const DryBreakCountRightState = atom<number>({
   key: "dryBreakCountRightState",
   default: 0,
 });
@@ -131,4 +131,39 @@ export const KickingErrorsLeftState = atom<number>({
 export const KickingErrorsRightState = atom<number>({
   key: "KickingErrorsRightState",
   default: 0,
+});
+
+export const AccuStatsState = selector<{ left: number; right: number }>({
+  key: "AccuStatsState",
+  get: ({ get }) => {
+    const MissedLeft = get(BallsMissedLeftState);
+    const UnforcedLeft = get(UnforcedErrorsLeftState);
+    const SafetyLeft = get(SafeteyErrorsLeftState);
+    const KickingLeft = get(KickingErrorsLeftState);
+    const BallspocketedLeft = get(BallsPocketedLeftState);
+
+    const MissedRight = get(BallsMissedRightState);
+    const UnforcedRight = get(UnforcedErrorsRightState);
+    const SafetyRight = get(SafeteyErrorsRightState);
+    const KickingRight = get(KickingErrorsRightState);
+    const BallspocketedRight = get(BallsPocketedRightState);
+
+    const ACCUStatLeft =
+      (MissedLeft + UnforcedLeft + SafetyLeft + KickingLeft) /
+        BallspocketedLeft -
+      1;
+
+    const ACCUStatRight =
+      (MissedRight + UnforcedRight + SafetyRight + KickingRight) /
+        BallspocketedRight -
+      1;
+
+    const PercentageACCUStatLeft = Math.round(ACCUStatLeft * 1000) / 1000;
+    const PercentageACCUStatRight = Math.round(ACCUStatRight * 1000) / 1000;
+    console.log("MissedLeft", 0 / 0 - 1);
+
+    console.log("PercentageACCUStatRight", ACCUStatRight);
+
+    return { left: PercentageACCUStatLeft, right: PercentageACCUStatRight };
+  },
 });
