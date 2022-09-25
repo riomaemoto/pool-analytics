@@ -47,7 +47,7 @@ export const TotalScore = () => {
         <Box
           textAlign="center"
           fontWeight="medium"
-          w={{ base: "150px", md: "250px" }}
+          w={"150px"}
           h="65px"
           bg="cyan"
           border="1px"
