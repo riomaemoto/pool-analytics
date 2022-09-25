@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <>
       <Center bg={{ base: "white", md: "gray.100" }}>
-        <Box p={"80px 120px 80px 480px"}>
+        <Box p={{ base: "80px 120px 80px 480px", md: "80px" }}>
           <PlayerName />
           <TopRecordList />
           <CenterRecordList />
