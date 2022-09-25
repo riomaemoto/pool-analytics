@@ -11,13 +11,13 @@ export const AccuStats = () => {
       <Flex justifyContent="center" mb={0.5}>
         <Box
           textAlign="center"
-          w={{ base: "30px", md: "80px" }}
+          w={{ base: "60px", md: "80px" }}
           border="1px"
           borderColor="gray.400"
         />
         <Box
           textAlign="center"
-          w={{ base: "30px", md: "80px" }}
+          w={{ base: "60px", md: "80px" }}
           borderY="1px"
           borderColor="gray.400"
           pt="20px"
@@ -27,7 +27,7 @@ export const AccuStats = () => {
         <Box
           textAlign="center"
           fontWeight="medium"
-          w={"75px"}
+          w={"150px"}
           h="65px"
           bg="cyan"
           border="1px"
@@ -38,7 +38,7 @@ export const AccuStats = () => {
         </Box>
         <Box
           textAlign="center"
-          w={{ base: "30px", md: "80px" }}
+          w={{ base: "60px", md: "80px" }}
           borderY="1px"
           borderColor="gray.400"
           pt="20px"
@@ -47,7 +47,7 @@ export const AccuStats = () => {
         </Box>
         <Box
           textAlign="center"
-          w={{ base: "30px", md: "80px" }}
+          w={{ base: "60px", md: "80px" }}
           border="1px"
           borderColor="gray.400"
         />
