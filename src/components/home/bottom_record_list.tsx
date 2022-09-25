@@ -16,11 +16,13 @@ export const BottomRecoredList = () => {
   return (
     <>
       <RecordItem
+        hasPercent
         title="Balls Pocket Pocketed"
         leftState={BallsPocketedLeftState}
         rightState={BallsPocketedRightState}
       />
       <RecordItem
+        hasPercent
         title="Balls Missed"
         leftState={BallsMissedLeftState}
         rightState={BallsMissedRightState}
