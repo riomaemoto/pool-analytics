@@ -20,7 +20,7 @@ export const InGameStats = () => {
       <Box
         textAlign="center"
         fontWeight="medium"
-        w={{ base: "150px", md: "80px" }}
+        w={"150px"}
         h="65px"
         bg="cyan"
         border="1px"
