@@ -29,10 +29,15 @@ export const TotalScore = () => {
   return (
     <>
       <Flex justifyContent="center" mb={0.5}>
-        <Box textAlign="center" w="80px" border="1px" borderColor="gray.400" />
         <Box
           textAlign="center"
-          w="80px"
+          w={{ base: "60px", md: "80px" }}
+          border="1px"
+          borderColor="gray.400"
+        />
+        <Box
+          textAlign="center"
+          w={{ base: "60px", md: "80px" }}
           borderY="1px"
           borderColor="gray.400"
           pt="20px"
@@ -42,7 +47,7 @@ export const TotalScore = () => {
         <Box
           textAlign="center"
           fontWeight="medium"
-          w="250px"
+          w={{ base: "150px", md: "250px" }}
           h="65px"
           bg="cyan"
           border="1px"
@@ -53,14 +58,19 @@ export const TotalScore = () => {
         </Box>
         <Box
           textAlign="center"
-          w="80px"
+          w={{ base: "60px", md: "80px" }}
           borderY="1px"
           borderColor="gray.400"
           pt="20px"
         >
           {BallsValue}
         </Box>
-        <Box textAlign="center" w="80px" border="1px" borderColor="gray.400" />
+        <Box
+          textAlign="center"
+          w={{ base: "60px", md: "80px" }}
+          border="1px"
+          borderColor="gray.400"
+        />
       </Flex>
     </>
   );

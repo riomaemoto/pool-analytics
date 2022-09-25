@@ -160,9 +160,6 @@ export const AccuStatsState = selector<{ left: number; right: number }>({
 
     const PercentageACCUStatLeft = Math.round(ACCUStatLeft * 1000) / 1000;
     const PercentageACCUStatRight = Math.round(ACCUStatRight * 1000) / 1000;
-    console.log("MissedLeft", 0 / 0 - 1);
-
-    console.log("PercentageACCUStatRight", ACCUStatRight);
 
     return { left: PercentageACCUStatLeft, right: PercentageACCUStatRight };
   },

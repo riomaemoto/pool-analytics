@@ -5,14 +5,14 @@ export const InGameStats = () => {
     <Flex justifyContent="center" mb={1}>
       <Box
         textAlign="center"
-        w="80px"
+        w={{ base: "60px", md: "80px" }}
         border="1px"
         borderColor="gray.400"
         pt={1}
       />
       <Box
         textAlign="center"
-        w="80px"
+        w={{ base: "60px", md: "80px" }}
         borderY="1px"
         borderColor="gray.400"
         pt={1}
@@ -20,7 +20,7 @@ export const InGameStats = () => {
       <Box
         textAlign="center"
         fontWeight="medium"
-        w="250px"
+        w={{ base: "150px", md: "80px" }}
         h="65px"
         bg="cyan"
         border="1px"
@@ -31,14 +31,14 @@ export const InGameStats = () => {
       </Box>
       <Box
         textAlign="center"
-        w="80px"
+        w={{ base: "60px", md: "80px" }}
         borderY="1px"
         borderColor="gray.400"
         pt={1}
       />
       <Box
         textAlign="center"
-        w="80px"
+        w={{ base: "60px", md: "80px" }}
         border="1px"
         borderColor="gray.400"
         pt={1}

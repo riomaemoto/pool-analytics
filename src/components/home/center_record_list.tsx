@@ -4,14 +4,8 @@ import {
   BreakandRunRightState,
   ConsecutiveBreakandRunLeftState,
   ConsecutiveBreakandRunRightState,
-  DryBreakCountLeftState,
-  DryBreakCountRightState,
   LongestGameWinningStreakLeftState,
   LongestGameWinningStreakRightState,
-  ScoreLeftState,
-  ScoreRightState,
-  TotalBreaksLeftState,
-  TotalBreaksRightState,
 } from "../../global/globalState";
 import { RecordItem } from "./common/record_item";
 

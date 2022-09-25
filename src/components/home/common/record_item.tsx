@@ -41,7 +41,7 @@ export const RecordItem: FC<Props> = ({
       <Flex justify={"center"} mb={1}>
         <Button
           onClick={() => setLeft(left - 1)}
-          w={"80px"}
+          w={{ base: "60px", md: "80px" }}
           h="65px"
           colorScheme="red"
         >
@@ -50,7 +50,7 @@ export const RecordItem: FC<Props> = ({
 
         <Button
           onClick={() => setLeft(left + 1)}
-          w={"80px"}
+          w={{ base: "60px", md: "80px" }}
           h="65px"
           colorScheme="blue"
         >
@@ -65,7 +65,7 @@ export const RecordItem: FC<Props> = ({
 
         <Button
           onClick={() => setRight(right + 1)}
-          w={"80px"}
+          w={{ base: "60px", md: "80px" }}
           h="65px"
           colorScheme="blue"
         >
@@ -74,7 +74,7 @@ export const RecordItem: FC<Props> = ({
 
         <Button
           onClick={() => setRight(right - 1)}
-          w={"80px"}
+          w={{ base: "60px", md: "80px" }}
           h="65px"
           colorScheme="red"
         >
