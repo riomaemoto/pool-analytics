@@ -15,7 +15,7 @@ export const EBox: FC<Props> = ({
   return (
     <Box
       textAlign={"center"}
-      w={{ base: "60px", md: "80px" }}
+      w={{ base: "30px", md: "80px" }}
       border={"1px"}
       borderRight={isRight ? "1px" : "0px"}
       borderColor={"gray.400"}
@@ -30,7 +30,7 @@ export const EMiddleBox: FC<Props> = ({ children }) => {
   return (
     <Box
       textAlign={"center"}
-      w={"150px"}
+      w={"75px"}
       bg="cyan"
       border={"1px"}
       borderColor="gray.400"
