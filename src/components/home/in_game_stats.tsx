@@ -1,17 +1,48 @@
-import { EFlex3, ENumber, ETextBox, ETextline } from "../common/styles";
+import { Box, Flex } from "@chakra-ui/react";
 
 export const InGameStats = () => {
   return (
-    <>
-      <EFlex3>
-        <ENumber></ENumber>
-        <ENumber></ENumber>
-        <ETextBox>
-          <ETextline>In Game Stats</ETextline>
-        </ETextBox>
-        <ENumber></ENumber>
-        <ENumber></ENumber>
-      </EFlex3>
-    </>
+    <Flex justifyContent="center" mb={1}>
+      <Box
+        textAlign="center"
+        w={{ base: "60px", md: "80px" }}
+        border="1px"
+        borderColor="gray.400"
+        pt={1}
+      />
+      <Box
+        textAlign="center"
+        w={{ base: "60px", md: "80px" }}
+        borderY="1px"
+        borderColor="gray.400"
+        pt={1}
+      />
+      <Box
+        textAlign="center"
+        fontWeight="medium"
+        w={{ base: "150px", md: "80px" }}
+        h="65px"
+        bg="cyan"
+        border="1px"
+        borderColor="gray.400"
+        pt="20px"
+      >
+        In Game Stats
+      </Box>
+      <Box
+        textAlign="center"
+        w={{ base: "60px", md: "80px" }}
+        borderY="1px"
+        borderColor="gray.400"
+        pt={1}
+      />
+      <Box
+        textAlign="center"
+        w={{ base: "60px", md: "80px" }}
+        border="1px"
+        borderColor="gray.400"
+        pt={1}
+      />
+    </Flex>
   );
 };

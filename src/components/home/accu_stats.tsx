@@ -1,30 +1,10 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { useMemo } from "react";
+import React from "react";
 import { useRecoilValue } from "recoil";
-import {
-  BallsPocketedLeftState,
-  BallsPocketedRightState,
-  ScoreLeftState,
-  ScoreRightState,
-} from "../../global/globalState";
+import { AccuStatsState } from "../../global/globalState";
 
-export const TotalScore = () => {
-  const scoreLeft = useRecoilValue(ScoreLeftState);
-  const scoreRight = useRecoilValue(ScoreRightState);
-  const BallspocketedLeft = useRecoilValue(BallsPocketedLeftState);
-  const BallspocketedRight = useRecoilValue(BallsPocketedRightState);
-
-  /** TotalScore  */
-  const TotalScore = useMemo((): number => {
-    const left9 = scoreLeft * 9;
-    const right9 = scoreRight * 9;
-    return left9 + right9;
-  }, [scoreLeft, scoreRight]);
-
-  /** BallsValue */
-  const BallsValue = useMemo((): number => {
-    return TotalScore - BallspocketedLeft - BallspocketedRight;
-  }, [TotalScore, BallspocketedLeft, BallspocketedRight]);
+export const AccuStats = () => {
+  const accustatsValue = useRecoilValue(AccuStatsState);
 
   return (
     <>
@@ -42,7 +22,7 @@ export const TotalScore = () => {
           borderColor="gray.400"
           pt="20px"
         >
-          {BallsValue}
+          {accustatsValue.left || 0}
         </Box>
         <Box
           textAlign="center"
@@ -54,7 +34,7 @@ export const TotalScore = () => {
           borderColor="gray.400"
           pt="20px"
         >
-          {TotalScore}
+          {"ACCU-STATS"}
         </Box>
         <Box
           textAlign="center"
@@ -63,7 +43,7 @@ export const TotalScore = () => {
           borderColor="gray.400"
           pt="20px"
         >
-          {BallsValue}
+          {accustatsValue.right || 0}
         </Box>
         <Box
           textAlign="center"
